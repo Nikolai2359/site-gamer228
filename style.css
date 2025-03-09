@@ -8,7 +8,7 @@ function toggleShorts() {
     shorts.style.display = shorts.style.display === "none" ? "block" : "none";
 }
 
-// Додавання стилю для анімації fade-in
+// Додавання стилю для анімації fade-in (якщо ще не додано в CSS)
 const fadeInStyle = document.createElement('style');
 fadeInStyle.innerHTML = `
 .fade-in {
@@ -20,11 +20,11 @@ fadeInStyle.innerHTML = `
 }`;
 document.head.appendChild(fadeInStyle);
 
-// Плавна поява елементів в .container при скролі
+// Плавна поява елементів .container при скролі
 window.addEventListener('scroll', function() {
     const elements = document.querySelectorAll('.container > *');
     elements.forEach(element => {
-        if (window.scrollY > 100) { // Налаштуй відстань за потреби
+        if (window.scrollY > 100) { 
             element.classList.add('fade-in');
         } else {
             element.classList.remove('fade-in');
