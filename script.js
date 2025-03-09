@@ -27,14 +27,12 @@ body {
 .main-title {
     font-size: 2em;
     color: #ffcc00;
-    text-align: center;
     transition: transform 0.3s ease;
 }
 
 .description {
     font-size: 1.2em;
     margin-bottom: 1.5em;
-    text-align: center;
     transition: transform 0.3s ease;
 }
 
@@ -74,7 +72,6 @@ body {
 
 .social-links {
     margin-top: 30px;
-    text-align: center;
 }
 
 .social-links a {
@@ -92,7 +89,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Секція партнерів - фіксований блок праворуч */
+/* Фіксований блок партнерів */
 .partners-section {
     position: fixed;
     right: 20px;
@@ -114,19 +111,55 @@ body {
     color: #ffcc00;
 }
 
+/* Партнер з ефектом переливаючогося контуру */
 .partner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     margin-bottom: 10px;
     cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    z-index: 1;
+    transition: transform 0.3s ease;
 }
 
 .partner p {
     margin: 0;
     font-size: 1.1em;
     color: #00bcd4;
+}
+
+/* Псевдоелемент для анімованого контуру */
+.partner::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-size: 400%;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.partner:hover::before {
+    opacity: 1;
+    animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 400% 50%;
+    }
 }
 
 .partner:hover p {
