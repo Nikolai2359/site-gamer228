@@ -1,0 +1,47 @@
+<html lang="uk">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Мій сайт</title>  
+    <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="header">  
+            <div class="main-title-container">  
+                <h1 class="main-title hoverable">Привіт! Ти залетів на мій канал, канал геймера 228 :) Улаштовуйся зручніше і дізнавайся більше про мене тут</h1>  
+            </div>  
+        </div>  
+
+        <p class="description hoverable">Ще я створюю свою нейромережу (тільки нікому ні слова)</p>  
+
+        <div class="categories">  
+            <span class="category hoverable" onclick="toggleStream()">Стрім проходження</span>  
+            <span class="category hoverable" onclick="toggleShorts()">Відео шортс</span>  
+        </div>  
+
+        <div id="video-container" class="video-container">  
+            <div id="stream" class="video" style="display:none;">  
+                <h2>Ось і останній стрім:</h2>  
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FbL5NGphEzM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+            </div>  
+            <div id="shorts" class="video" style="display:none;">  
+                <h2>А ось і останній шортс:</h2>  
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HjeSEeqetRI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+            </div>  
+        </div>  
+
+        <hr class="divider">  
+
+        <div class="social-links">  
+            <h2>Мої соцмережі:</h2>  
+            <a href="https://t.me/boost?c=2454916156" target="_blank" class="hoverable">Telegram</a>  
+            <a href="https://www.youtube.com/@Ne-Kolya" target="_blank" class="hoverable">YouTube</a>  
+            <a href="https://www.tiktok.com/@niko_lai2359" target="_blank" class="hoverable">TikTok</a>  
+            <a href="http://twitch.tv/niko_lai2349?sr=a" target="_blank" class="hoverable">Twitch</a>  
+        </div>  
+    </div>  
+
+    <script src="script.js"></script>  
+</body>  
+</html>  
